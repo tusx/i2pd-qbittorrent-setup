@@ -23,10 +23,10 @@ podman network create i2p_net
 ```bash
 podman run -d \
 --name i2pd \
---net i2p_net \
+--net i2p-net \
 --net isolated_i2p \
 --restart unless-stopped \
--v i2pd_data:/var/lib/i2pd:z \
+-v i2pd_data:/home/i2pd/data:Z,U \
 -p 127.0.0.1:7070:7070 `# optional` \
 -p 127.0.0.1:4444:4444 `# optional` \
 -p 127.0.0.1:4447:4447 `# optional` \
