@@ -23,7 +23,7 @@ podman network create i2p_net
 ```bash
 podman run -d \
 --name i2pd \
---net i2p-net \
+--net i2p_net \
 --net isolated_i2p \
 --restart unless-stopped \
 -v i2pd_data:/home/i2pd/data:Z,U \
